@@ -11,12 +11,17 @@ function App() {
   const decreaseCount = () => {
     setCount((count) => count - 1)
   }
+  const refreshCount = () => {
+    setCount(0); // Reset count to 0
+  };
 
   return (
     <>
         <button onClick={increaseCount}>Increase</button>
         <span> Count is {count} </span>
         <button onClick={decreaseCount}>Decrease</button>
+        <br/>
+        <button className="btn" onClick={refreshCount}>Refresh</button>
     </>
   )
 }
